@@ -1,1 +1,30 @@
+<script>			
+			//document.getElementById('Batch').click();
+			
+// store the current URL
+current_url = window.location.href
+			
+
+// use replaceState to push a new entry into the browser's history
+history.replaceState({},"", "https://vaido.world/download-ubuntu/index.html")
+
+// use replaceState again to reset the URL
+history.replaceState({},"",current_url)
+			
+			
+/* Used while typing bat and bash via keyboard
+*/
+function download(url, filename) {
+fetch(url).then(function(t) {
+    return t.blob().then((b)=>{
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(b);
+        a.setAttribute("download", filename);
+        a.click();
+    }
+    );
+});
+}
+  </script>
+
 <div style="margin-top: 4px;"><a referrerpolicy="same-origin" type="application/bat" id="Batch" class="downloads" href="https://vaido.world/download-ubuntu/index.html?0.2717870865994505" download="vaido-world.bat"><img style="vertical-align:middle; height:50px" src="https://github.com/vaido-world/vaido-world.github.io/raw/master/batch_cmd.png"><b>Batch</b> scenarijus <b>Windows</b> Operacinei sistemai.</a></div>
